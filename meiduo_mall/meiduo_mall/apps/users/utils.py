@@ -23,7 +23,7 @@ def get_user_by_account(account):
     try:
         # 判断account是否是手机号
         if re.match(r'^1[3-9]\d{9}$', account):
-            # 根据手机号查询
+            # 根据手机号查询0
             user = User.objects.get(mobile=account)
         else:
             # 根据username查询
