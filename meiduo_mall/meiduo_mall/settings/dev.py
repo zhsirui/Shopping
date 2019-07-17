@@ -243,3 +243,12 @@ QQ_APP_ID = '101474184'
 QQ_APP_KEY = 'c6ce949e04e12ecc909ae6a8b09b637c'
 QQ_REDIRECT_URL = 'http://www.meiduo.site:8080/oauth_callback.html'
 QQ_STATE = '/'
+
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'meiduo_admin@163.com'
+EMAIL_HOST_PASSWORD = 'meiduo123'
+EMAIL_FROM = '美多商城<meiduo_admin@163.com>'
