@@ -28,9 +28,10 @@ class FastDFSStorage(Storage):
         """
         # 保存到FastDFS
         client = Fdfs_client(self.client_conf)
-
-        ret = client.upload_by_buffer(content.read())
-
+        try:
+            ret = client.upload_by_buffer(content.read())
+        except Exception as e:
+            print(e)
         if ret.get("Status") != "Upload successed.":
             raise Exception("upload file failed")
 
